@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    padding: 0;
+    color: black; /* Updated color */
+    display: flex;
+    font-family: Pacifico;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1;
+}
+
+header h1, header h2 {
+    padding-top: 0%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove padding if any */
+}
+
+header h1 {
+    font-size:100px;
+    font-family:Cookie;
+}
+
+header h2 {
+    font-size: 24px; /* Adjust as needed */
+}
+
+.text-box {
+    width: 100%; /* Adjust width as needed */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.line {
+    font-size: 20px; /* Adjust text size */
+    font-weight: bold;
+    color: black; /* Updated color */
+    opacity: 0; /* Initially hide the lines */
+    animation: fadeInLine 1.0s ease-in-out forwards; /* Line animation */
+    margin-bottom: 10px; /* Add some space between lines */
+}
+
+/* Delay each line's appearance */
+.line:nth-child(1) {
+    animation-delay: 0.5s; /* Line 1 appears after 0.5s */
+}
+
+.line:nth-child(2) {
+    animation-delay: 1s; /* Line 2 appears after 1s */
+}
+
+.line:nth-child(3) {
+    animation-delay: 1.5s; /* Line 3 appears after 1.5s */
+}
+
+.line:nth-child(4) {
+    animation-delay: 2s; /* Line 4 appears after 2s */
+}
+
+.line:nth-child(5) {
+    animation-delay: 2.5s; /* Line 5 appears after 2.5s */
+}
+
+/* Keyframe for line fade-in effect */
+@keyframes fadeInLine {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+header, footer {
+    background: transparent;
+    color: black; /* Updated color */
+    padding: 5px 3px;
+    z-index: 10;
+}
+
+footer {
+    font-size: x-small;
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul {
+    font-family: Cookie;
+    font-size: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+h1 {
+    font-size: 3rem;
+    padding: 0px 0px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(4, 8, 29); /* Updated color */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    padding: 5px 10px; 
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #3e5b66; /* Slightly lighter white on hover */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-top: 0px;
+    padding: 40px;
+}
+
+.section {
+    padding: 40px;
+    background: transparent;
+    border-radius: 12px;
+    color: black; /* Updated color */
+}
+
+.highlight {
+    color: black; /* Updated color */
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block; 
+    padding: 5px 10px; 
+    border: 2px solid black; /* Updated color */
+    border-radius: 5px; 
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+    padding: 0px;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center align the skills */
+    gap: 30px; /* Add space between items */
+    padding: 20px;
+}
+
+.skill img {
+    width: 60px; /* Adjust size */
+    height: 60px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    margin: 10px; /* Space around each image */
+    padding: 5px; /* Optional inner spacing */
+    border-radius: 10px; /* Optional rounded edges */
+    background-color: rgba(5, 5, 5, 0.1); /* Light background */
+}
+
+.skill img:hover {
+    transform: scale(1.2);
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.client-details {
+    display: none; /* Hide all client details initially */
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.client-info {
+    display: grid;
+    justify-content: end;
+    width: 100%;
+    padding: 20px;
+}
+
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50vh; /* Adjust height as needed */
+}
+
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between items */
+    padding: 40px;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.contact-container a {
+    text-decoration: none;
+    color: black; /* Updated color */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.contact-container a:hover {
+    color: #3c5555;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.company-list {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+   
+}
+
+.company-list li {
+    margin: 10px 0;
+}
+
+.company-list a {
+    color: black; /* Updated color */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 2px;
+    border-color: black;
+}
+
+.company-list a:hover {
+    text-decoration: none;
+    
+}
